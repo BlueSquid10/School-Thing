@@ -1,30 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
- 
-        <title>School Thing - Chating</title>
-        <meta name="description" content="Tuts+ Chat Application" />
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="menu">
-                <p class="welcome">Welcome, <b></b></p>
-                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
-            </div>
- 
-            <div id="chatbox"></div>
- 
-            <form name="message" action="">
-                <input name="usermsg" type="text" id="usermsg" />
-                <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
-            </form>
+<html>
+  <head>
+    <title>School Thing - Vchat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><a href="/">index.html</a></h1>
+        <h2><a href="/">Use this to chat with your friends</a></h2>
+      </header>
+
+      <div id="okta-login-container"></div>
+
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-md-auto align-self-center">
+          <p id="login"><b>NOTE</b>: You are not currently logged in. If you'd like to start your own
+            chat room please <button type="button" class="btn btn-light">log in</button></p>
+          <div id="url" class="alert alert-dark" role="alert">
+            <span id="roomIntro">ROOM URL</span>: <span id="roomUrl"></span>
+          </div>
         </div>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            // jQuery Document
-            $(document).ready(function () {});
-        </script>
-    </body>
+        <div class="col"></div>
+      </div>
+
+      <div id="remotes" class="row">
+        <div class="col-md-6">
+          <div class="videoContainer">
+            <video id="selfVideo"></video>
+            <meter id="localVolume" class="volume"></meter>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
