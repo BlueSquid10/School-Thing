@@ -1,44 +1,30 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-
-  <title>School Thing - Video Chat</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600&family=Josefin+Slab&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css">
-
-</head>
-
-<body class="h-100">
-  <div class="h-100" id="video_display">
-
-    <div id ="video_container" class="align-items-center" style="margin-top: 10%;">
-      <div class="local_div" id="div1" style="">
-				<video id="localVideo" class="" autoplay muted playsinline></video>
-			</div>
-			<div class="remote_div" id="div2">
-				<video id="remoteVideo" class="" autoplay playsinline></video>
-			</div>
-    </div>
-
-  </div>
-  
-
-  
-
-  <!-- Import SocketIO for signalling -->
-  <script src="/socket.io/socket.io.js"></script>
-
-  <!-- Import WebRTC adapter for compatibility with all the browsers  -->
-  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-  
-  <!-- Import TURN config -->
-  <script src="js\config.js"></script>
-
-  <!-- Import script containing WebRTC related functions -->
-  <script src="js\main.js"></script>
-  
-</body>
-
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+ 
+        <title>School Thing - Chat Box</title>
+        <meta name="description" content="Tuts+ Chat Application" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="menu">
+                <p class="welcome">Welcome,<b></b></p>
+                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+            </div>
+ 
+            <div id="chatbox"></div>
+ 
+            <form name="message" action="">
+                <input name="usermsg" type="text" id="usermsg" />
+                <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
+            </form>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            // jQuery Document
+            $(document).ready(function () {});
+        </script>
+    </body>
 </html>
